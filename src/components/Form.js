@@ -1,4 +1,15 @@
+import {useState} from "react"
+
 export default function Form(){
+
+    const[nome,setNome]=useState("");
+    const[email,setEmail]=useState("");
+    const[cpf,setCPF]=useState("");
+    const[telefone,setTelefone]=useState("");
+    const[idade,setIdade]=useState("");
+    const[usuario,setUsuario]=useState("");
+    const[senha,setSenha]=useState("");
+
     return(
         <div className= "form">
             <h2>Cadastro de Cliente</h2>
@@ -37,6 +48,8 @@ export default function Form(){
                 <label for="Senha" class="form-label">Senha</label>
                 <input type="password" class="form-control" id="Senha" placeholder="Password"/>
             </div>
+
+            <button type="button" class="btn btn-dark">Cadastrar</button>
         </div>
     )
 }
